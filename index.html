@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <!-- Event listener - A javascript can be executed when an event occurs, like when 
+    a user click on an HTML element 
+    I> addEventListener() 
+     -> removeEventListener()
+       //Events
+        click
+    mouseover
+    mouseout
+        example below-->
+
+        <div>
+            <img src="1.jpg" alt="">
+
+        </div>
+                <h3 id="LikeH">Show Like Count</h3>
+                <h3 id="disLikeH">Show dislike count</h3>
+                <button id="LikeB">Like</button>
+                <button id="dislikeB">Dislike</button>
+                    <br><br>
+        <!-- <div> -->
+                <!-- <img src="2.jpg" alt="" height="200px" width="300px">
+            </div>
+            <h3 id="LikeH">Show Like Count</h3>
+                <h3 id="disLikeH">Show dislike count</h3>
+                <button id="LikeB">Like</button>
+                <button id="dislikeB">Dislike</button> --> -->
+</body>
+      
+</html>
+
+<script>
+    document.querySelector("#LikeB").addEventListener("click", myLikeFun)
+    document.querySelector("#dislikeB").addEventListener("click", myDislikeFun)
+
+    var likeCount = 0;
+    var dislikeCount = 0;
+    
+    function myLikeFun(){
+        likeCount++
+        //console.log(likeCount);
+        document.getElementById("LikeH").innerText = "Likes ->" + likeCount;
+    }
+
+    function myDislikeFun(){
+        dislikeCount++
+        document.getElementById("disLikeH").innerText = "Dislike ->" + dislikeCount;
+    }
+
+
+</script>

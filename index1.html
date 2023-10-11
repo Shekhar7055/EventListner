@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- mouseover and mouse out example -->
+</head>
+        <style>
+            div{
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+            }
+        </style>
+<body>
+        <div></div>
+        <br>
+        <button onclick = "myFun()">"Click me"</button>
+        <p id="p"></p>
+</body>
+</html>
+
+<script>
+    document.querySelector("div").addEventListener("mouseenter", changeBgColor)
+
+    function changeBgColor(){
+        document.querySelector("div").style.backgroundColor = "green";
+    }
+
+    document.querySelector("div").addEventListener("mouseleave", changeToDefault)
+
+    function changeToDefault(){
+        document.querySelector("div").style.backgroundColor = "blue";
+    }
+    function myFun(){
+        document.getElementById("p").innerHTML="Click me!"
+        alert("Button Click")
+    }
+</script>
